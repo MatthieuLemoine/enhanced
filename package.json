@@ -19,6 +19,7 @@
   },
   "scripts": {
     "dev": "web-ext run -p default --start-url https://www.spotify.com/fr/account/subscription/receipt/",
+    "build": "web-ext lint && web-ext build --overwrite-dest && web-ext sign --api-key $FIREFOX_KEY --api-secret $FIREFOX_SECRET",
     "lint": "eslint .",
     "prettify": "prettier-eslint --write \"**/*.js*\" --list-different",
     "pretty-check": "prettier-eslint \"**/*.js*\" --list-different",

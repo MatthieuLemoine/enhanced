@@ -5,7 +5,7 @@
   "description": "An extension to enhance the web.",
   "icons": {
     "48": "assets/enhanced-48.png",
-    "96": "assets/enhanced-48.png"
+    "96": "assets/enhanced-96.png"
   },
   "background": {
     "scripts": ["src/browser-polyfill.min.js", "src/background.js"]

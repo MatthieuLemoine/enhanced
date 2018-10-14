@@ -6,4 +6,4 @@ An extension to enhance the web.
 
 Create a Payfit expense from a Spotify receipt.
 
-Go to https://www.spotify.com/fr/account/subscription/receipt/ and select a receipt then click on the Payfit button.
+Go to https://www.spotify.com/fr/account/subscription/receipt/, select a receipt and click on the Payfit button.
