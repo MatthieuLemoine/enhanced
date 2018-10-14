@@ -1,0 +1,45 @@
+{
+  "name": "enhanced",
+  "version": "1.0.0",
+  "description": "An extension to enhance the web.",
+  "main": "index.js",
+  "repository": "https://github.com/MatthieuLemoine/enhanced",
+  "author": "MatthieuLemoine",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "husky": "^1.1.1",
+    "jest": "^23.6.0",
+    "lint-staged": "^7.3.0",
+    "prettier": "^1.14.3",
+    "prettier-eslint-cli": "^4.7.1",
+    "web-ext": "^2.9.1"
+  },
+  "scripts": {
+    "dev": "web-ext run -p default --start-url https://www.spotify.com/fr/account/subscription/receipt/",
+    "lint": "eslint .",
+    "prettify": "prettier-eslint --write \"**/*.js*\" --list-different",
+    "pretty-check": "prettier-eslint \"**/*.js*\" --list-different",
+    "check-version": "node scripts/check-version.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "*.js": [
+        "prettier-eslint --write --config .prettierrc",
+        "eslint --fix",
+        "git add"
+      ],
+      "*.json": [
+        "prettier-eslint --write --config .prettierrc",
+        "git add"
+      ]
+    }
+  }
+}
